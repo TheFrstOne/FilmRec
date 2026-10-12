@@ -1,0 +1,112 @@
+# ============================================================
+# FilmRec 根级 .gitignore
+# 约定：环境/密钥、依赖、构建产物、缓存、数据集、模型权重 一律不入库
+# ============================================================
+
+# ---------- 环境变量 / 密钥 ----------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境（backend/.venv 等）
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# 测试 / 类型检查 / 缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---------- Node / Next.js ----------
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+.next/
+out/
+build/
+.vercel
+.turbo
+
+# TS / 日志
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+logs/
+
+# ---------- 数据 / 模型产物 ----------
+# 数据集体积大且可由 pipeline 重新生成，默认不入库
+data/*.csv
+data/**/*.csv
+data/raw/
+data/processed/
+data/interim/
+
+# 训练产物：只保留轻量 metadata.json，二进制模型不入库
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.npy
+*.npz
+*.parquet
+pipeline/artifacts/**/model.*
+pipeline/artifacts/**/index.*
+
+# ---------- 编辑器 / 操作系统 ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

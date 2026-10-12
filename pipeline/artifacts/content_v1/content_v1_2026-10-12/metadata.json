@@ -1,0 +1,15 @@
+{
+  "model_name": "content_v1",
+  "model_version": "content_v1_2026-10-12",
+  "trained_at": "2026-10-12T10:57:33",
+  "algorithm": "content-based cosine similarity",
+  "n_movies": 3916,
+  "n_features": 119,
+  "weights": {
+    "genres": 1.0,
+    "countries": 0.5,
+    "year": 0.3,
+    "rating": 0.3
+  },
+  "metrics": {}
+}
