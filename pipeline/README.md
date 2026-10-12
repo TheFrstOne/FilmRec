@@ -17,7 +17,7 @@ pipeline/
 ```powershell
 cd D:\Study\FilmRec
 backend\.venv\Scripts\activate
-pip install -r pipeline\requirements.txt
+pip install -r requirements.txt
 
 # 前置：先建表
 #   mysql -u filmRec -p moviesrec < sql\schema.sql
@@ -34,7 +34,7 @@ python pipeline\etl\load_movies.py
 ```powershell
 cd D:\Study\FilmRec
 backend\.venv\Scripts\activate
-pip install -r pipeline\requirements.txt   # 训练依赖 pandas / scikit-learn
+pip install -r requirements.txt   # 训练依赖 pandas / scikit-learn
 
 # 前置：MySQL 里已经跑过 sql\schema.sql，且 v_movies_flat 有数据
 python pipeline\train\train_content_based.py

@@ -26,7 +26,6 @@ FilmRec/
 │   ├── auth.py                    #   注册 / 登录 / 刷新 / 登出 / 当前用户
 │   ├── db.py                      #   MySQL 连接
 │   ├── recommender.py             #   加载模型 + 出推荐 + 冷启动兜底
-│   ├── requirements.txt
 │   └── .env
 ├── pipeline/                      # ★ 离线层（和线上物理隔离）
 │   ├── etl/                       #   CSV → 规范化 MySQL
@@ -36,6 +35,7 @@ FilmRec/
 │   ├── data/                      #   Parquet 快照（带日期）
 │   └── artifacts/                 #   模型产物（版本化）
 │       └── content_v1/content_v1_2026-01-01/{model.pkl, metadata.json}
+├── requirements.txt              #   ★全项目统一依赖（backend + pipeline + tools）
 ├── sql/
 │   └── schema.sql                 #   唯一的 DDL 文件
 ├── data/movie_data_clean.csv

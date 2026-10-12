@@ -1,0 +1,31 @@
+# FilmRec 统一依赖清单
+# 覆盖：backend（在线 FastAPI 服务）+ pipeline（离线 ETL / 训练）+ tools（爬虫/清洗脚本）
+#
+# 安装：
+#   cd D:\Study\FilmRec
+#   backend\.venv\Scripts\activate
+#   pip install -r requirements.txt
+
+# ---------- 在线服务 backend ----------
+fastapi==0.128.8
+uvicorn[standard]==0.39.0
+pydantic==2.13.5
+python-dotenv==1.2.1
+PyMySQL==1.2.3
+SQLAlchemy==2.0.54
+bcrypt==5.0.0
+PyJWT==2.15.1
+
+# ---------- 离线层 pipeline（ETL / 特征 / 训练） ----------
+numpy==2.0.2
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.5.2
+joblib==1.5.3
+threadpoolctl==3.5.0
+
+# ---------- 工具脚本 tools ----------
+requests==2.32.3
+
+# ---------- 旧 Flask 服务（backend/app.py，已被 main.py 取代，确认删除后可移除） ----------
+flask-cors==6.0.5
